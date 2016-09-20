@@ -9,6 +9,11 @@
     <a class="navbar-brand" href="/">Storedom</a>
   </div>
 
+  <%= form_tag :search, method: :get do %>
+    <%= text_field_tag "search", nil, placeholders: "Search..." %>
+  <%= submit_tag "Search", class:"btn btn-info" %>
+  <% end %>
+
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li>

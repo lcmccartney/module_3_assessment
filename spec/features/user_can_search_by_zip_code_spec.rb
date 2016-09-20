@@ -4,8 +4,8 @@ RSpec.feature "User search by zip code", type: :feature do
   scenario "they see items with the Items header" do
 
     visit root_path
-    fill_in("search"), with: "80202"
-    click_on "Search"
+    fill_in "search", with: "80202"
+    click_button "Search"
 
     expect(page.status_code).to eq(200)
     expect(current_path).to be("/search")
